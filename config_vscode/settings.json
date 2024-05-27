@@ -1,0 +1,359 @@
+// Requirements:
+// 1. Must install APC extension (drcika.apc-extension)
+// 2. Change the font family or install JetBrainsMono Nerd Font (https://www.nerdfonts.com/font-downloads)
+// 3. Change the color theme or install Catppuccin Mocha (Catppuccin.catppuccin-vsc)
+//   3.1. If you changed the color theme, also change the color of the window controls to match the theme (Line 101 of this gist)
+// 4. Change the icon theme or install Symbols (miguelsolorio.symbols)
+// 5. Change/add your specific settings whatever you like
+// ⚠ Made for Windows so idk how its gonna look on Mac
+
+{
+  // General
+  //"json.schemaDownload.enable": true,
+  "update.mode": "start", // manual
+  "update.showReleaseNotes": false,
+  "window.titleBarStyle": "native",
+  "window.commandCenter": true, //false
+  "window.menuBarVisibility": "hidden",
+  "window.restoreWindows": "all",
+  "files.associations": {
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    "*.css": "css"
+  },
+  "files.autoSave": "onFocusChange",   
+  
+  // Workbench
+  "workbench.startupEditor": "newUntitledFile",
+  //"workbench.list.smoothScrolling": true,
+  "workbench.iconTheme": "symbols",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.empty.hint": "hidden",
+  //"workbench.editor.editorActionsLocation": "default",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+
+  // Tema
+  "workbench.colorTheme": "Catppuccin Mocha",
+
+  // Editor
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.8,
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  //"editor.cursorSmoothCaretAnimation": "on",
+  //"editor.smoothScrolling": true,
+  "editor.parameterHints.enabled": true, //false
+  "editor.fontFamily": "JetBrains Mono",
+  "window.zoomLevel": 1,
+  "editor.fontLigatures": true,
+  "editor.acceptSuggestionOnCommitCharacter": false, //true
+  "editor.accessibilitySupport": "off",
+  "editor.semanticHighlighting.enabled": true,
+  //"editor.inlineSuggest.enabled": true,
+  "editor.hideCursorInOverviewRuler": false,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden", //auto
+  "editor.renderLineHighlight": "gutter", //all
+  //"editor.quickSuggestions": {
+  //  "strings": "on"
+  //},
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Explorer
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": ".eslint*, .prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*, .yarn*, yarn.lock",
+    "tailwind.config.js": "tailwind.config*, postcss.config*",
+    "next.config.js": "next*",
+    ".env.local": ".env*",
+    ".env": ".env*"
+  },
+
+  // Terminal
+  "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.gpuAcceleration": "off",
+
+  // terminal config
+
+  // Security
+  "security.promptForLocalFileProtocolHandling": false,
+  "security.workspace.trust.untrustedFiles": "newWindow", //open
+  //"security.workspace.trust.banner": "never",
+  //"security.workspace.trust.startupPrompt": "never",
+  //"security.workspace.trust.enabled": false,
+
+
+  ///////////////
+  "files.exclude": {
+    "**\/CVS": true,
+    "**\/.DS_Store": true,
+    "**\/.hg": true,
+    "**\/.svn": true,
+    "**\/.git": true,
+    ".vscode": true
+    // "node_modules": true
+  },
+
+
+  "symbols.hidesExplorerArrows": false,
+
+  "symbols.files.associations": {
+    "*.module.ts": "nest",
+    "*.guard.ts": "typescript",
+    "*.spec.ts": "ts-test",
+    "*.e2e-spec.ts": "ts-test",
+    "vitest.config.e2e.ts": "vite",
+    ".env.example": "gear"
+  },
+  
+  "autoimport.showNotifications": true,
+  "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
+  "autoimport.autoComplete": true,
+  "git.suggestSmartCommit": false,
+
+  //Todo Tree
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "BUG",
+    "HACK",
+    "NOTE",
+    "INFO",
+    "[]",
+    "[X]",
+  ],
+
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))[file://s*($TAGS)]\\s*($TAGS)",
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "type": "line",
+      "iconColour": "#ffe100b5",
+      "foreground": "#fc0404",
+      "background": "#ffe100"
+    },
+    "FIXME": {
+      "icon": "beaker",
+      "iconColour": "#fc0404",
+      "foreground": "#ffffff",
+      "background": "#fc0404"
+    },
+    "BUG": {
+      "icon": "bug",
+      "type": "line",
+      "iconColour": "#fc0404",
+      "foreground": "#ffffff",
+      "background": "#fc0404"
+    },
+    "INFO": {
+      "icon": "info",
+      "iconColour": "#ffffff",
+      "foreground": "#ffffff",
+      "background": "#000000"
+    },
+  },
+
+  // Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.trailingComma": "all",
+  
+  // Language specific settings
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "graphql"
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+ 
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+  },
+
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  // cspell checker
+
+  "cSpell.spellCheckOnlyWorkspaceFiles": false,
+
+  "cSpell.language": "pt_BR, en-US",
+  "cSpell.userWords": [
+    "AGREGACAO",
+    "Atualizacao",
+    "autofetch",
+    "autoimport",
+    "BASEPATH",
+    "basicos",
+    "bmewburn",
+    "bootcamp",
+    "calendario",
+    "Cascadia",
+    "Catppuccin",
+    "chakra",
+    "checkin",
+    "checkins",
+    "clsx",
+    "Codegen",
+    "codigo",
+    "combustivel",
+    "conteudo",
+    "criterio",
+    "datadog",
+    "Datetime",
+    "dayjs",
+    "desativacao",
+    "descricao",
+    "devolucao",
+    "Devolucao",
+    "Dexie",
+    "disponivel",
+    "Dotenv",
+    "esbenp",
+    "esbuild",
+    "fastify",
+    "Fastify",
+    "feedbackwidget",
+    "ffprobe",
+    "fipe",
+    "funcoes",
+    "grafico",
+    "graficos",
+    "historico",
+    "Hono",
+    "intelephense",
+    "IUGU",
+    "jamjuree",
+    "jupiter",
+    "jupyter",
+    "lclz",
+    "liveblocks",
+    "LIVEBLOCKS",
+    "liveshare",
+    "lockb",
+    "manutencao",
+    "middlewares",
+    "mixpanel",
+    "monaco",
+    "movimentacao",
+    "nestjs",
+    "odometro",
+    "omni",
+    "Omni",
+    "Onboarded",
+    "pallas",
+    "parametros",
+    "permissao",
+    "postgres",
+    "postgresql",
+    "prefetch",
+    "preparacao",
+    "previsao",
+    "programfiles",
+    "proximas",
+    "reactflow",
+    "reativacao",
+    "rgba",
+    "roboto",
+    "rocketseat",
+    "rotion",
+    "rsxp",
+    "Sandpack",
+    "selecao",
+    "Selecao",
+    "sequelizerc",
+    "shiki",
+    "situacao",
+    "situacoes",
+    "skylab",
+    "sqlite",
+    "stylelintrc",
+    "stylesheet",
+    "supergraph",
+    "svgr",
+    "sympla",
+    "Sysnative",
+    "textblock",
+    "tiptap",
+    "trpc",
+    "TRPC",
+    "tsup",
+    "unfollow",
+    "Unfollow",
+    "unform",
+    "Unform",
+    "unmark",
+    "upsert",
+    "usuario",
+    "Usuario",
+    "usuarios",
+    "utilitarias",
+    "utilizacao",
+    "veiculos",
+    "WEBPUSH",
+    "windir"
+  ],
+
+  "cSpell.enableFiletypes": [
+    "!asciidoc",
+    "!c",
+    "!cpp",
+    "!csharp",
+    "!go",
+    "!handlebars",
+    "!haskell",
+    "!jade",
+    "!java",
+    "!latex",
+    "!php",
+    "!pug",
+    "!python",
+    "!restructuredtext",
+    "!rust",
+    "!scala",
+    "!scss"
+  ],
+
+}
