@@ -21,9 +21,23 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zsh
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
+python global
+```
+pip install pipx
+```
+
+depois e so instalar as biblioteca que vc quer por padrao
+```
+pipx install poetry
+
+pipx ensurepath
+```
+
+
+
 
 ```
-poetry config virtualenvs.prefer-active-python true
+poetry config virtualenvs.in-project true
 
 ```
 
