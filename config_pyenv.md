@@ -25,4 +25,9 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 poetry config virtualenvs.prefer-active-python true
 
-``
+```
+
+```
+pip freeze | grep -v "^-e" | xargs pip uninstall -y
+
+```
